@@ -20,8 +20,13 @@ Pada tahap awal ini, kita akan menginstall sebuah perangkat yang aka di gunakan 
 
 ## 3. Modul 2: Pengenalan Tools Wireshark
 Modul ini berfokus pada cara kerja *Packet Sniffer* dan pengenalan antarmuka grafis (GUI) Wireshark.
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <br>
+  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
+</p>
 
-### 3.1 Struktur Packet Sniffer
+
 Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan setiap *frame* lapisan link (*link layer*) yang dikirim atau diterima oleh komputer, baik melalui Ethernet maupun WiFi.
 
 <p align="center">
@@ -30,14 +35,7 @@ Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan 
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
 
-### 3.2 Antarmuka Utama Wireshark
-Berdasarkan pengamatan pada aplikasi, terdapat lima komponen utama yang harus dipahami:
-* **Command Menus:** Menu standar (File, Edit, Capture, dll.) untuk mengelola aktivitas aplikasi.
-* **Packet-Listing Window:** Menampilkan ringkasan satu baris untuk setiap paket yang tertangkap, termasuk nomor, waktu, sumber, tujuan, dan jenis protokol.
-* **Packet-Header Details Window:** Memberikan rincian protokol dari paket yang dipilih, memberikan rincian tentang frame Ethernet dan datagram IP.
-* **Packet-Contents Window:** Menampilkan seluruh isi frame yang diambil dalam format ASCII dan heksadesimal.
-* **Filter Display Field:** Tempat memasukkan nama protokol (seperti "http") untuk menyaring informasi yang ditampilkan di jendela daftar paket.
-
+Frame ini ibarat sebuah informasi unik yang dikirimkan oleh komputer sebagai identitas dari suatu device, seperti IP, Protocol, Dll.
 
 ## 4. Analisis Pengenalan Protokol HTTP
 Sesuai instruksi modul, dilakukan pengujian dengan mengakses URL untuk memicu lalu lintas HTTP dan mengamati interaksi protokol secara langsung.
