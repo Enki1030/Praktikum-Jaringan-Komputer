@@ -23,7 +23,7 @@ Modul ini berfokus pada cara kerja *Packet Sniffer* dan pengenalan antarmuka gra
 Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan setiap *frame* lapisan link (*link layer*) yang dikirim atau diterima oleh komputer, baik melalui Ethernet maupun WiFi.
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/carakerjasniffset.png">
   <br>
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
@@ -33,7 +33,7 @@ Setelah mengetahui cara kerja nya(secara sederhana), kita masuk kedalam praktiku
 ---
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Wireshark%20tampilan.png">
   <br>
 </p>
 
