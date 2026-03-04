@@ -70,14 +70,14 @@ Langkah Langkah nya
 - Masuk klik pada bagian Wifi (atau ethernet local yang menampilkan grafik kalau anda menggunakan wire/kabel)
 - Nanti akan muncul tampilan seperti gambar seperti dii bawah ini:
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/tampilan%20wifi.png" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
 kita cukup perhatikan kotak warna merah dan fokus ke protokol, apakah ada protokol yang bernama HTTP
 jika tidak ada, maka anda bisa melakukan restart dengan cara:
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
 
@@ -100,7 +100,7 @@ Jika sudah, maka tampilannya seperti ini:
 Anda bisa Pilih Info 2"00 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah untuk detail dari paketnya. 
 
 <p align="center">
-  <img src="[path/ke/gambar-http-result.png" alt="Hasil Capture HTTP](https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Bukti%20BERHASIL.png)">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Bukti%20BERHASIL.png">
   <br>
   <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
 </p>
