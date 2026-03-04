@@ -4,17 +4,18 @@
 **Modul:** 1 & 2 (Instalasi & Pengenalan Tools Wireshark)
 
 ## 1. Pendahuluan
-Pemahaman mendalam mengenai protokol jaringan tidak cukup hanya dengan teori, melainkan harus dibuktikan dengan pengamatan langsung terhadap paket data yang mengalir di dalam jaringan. Melalui praktikum ini, kita menggunakan **Wireshark**, sebuah perangkat lunak *packet sniffer* yang memungkinkan kita untuk menangkap ("sniff") dan menganalisis pesan yang dipertukarkan antara entitas protokol secara pasif.
-
-Tujuan utama dari praktikum ini adalah untuk memastikan kesiapan perangkat lunak pendukung dan memahami komponen utama antarmuka Wireshark guna mengidentifikasi paket data dalam skenario jaringan nyata.
+Praktikum Jaringan Komputer ini memberikan pembelajaran dan praktik dari matakuliah jaringan komputer teori. Melalui praktikum ini, kita menggunakan **Wireshark**, sebuah perangkat lunak *packet sniffer* yang memungkinkan kita untuk mengambil  ("sniff") dan menganalisis pesan yang bertukar antar protokol yang bisa di lihat di wireshark. 
 
 
 ## 2. Modul 1: Persiapan Lingkungan (Running Modul)
-Pada tahap awal, dilakukan verifikasi dan instalasi *tools* dasar yang akan digunakan selama satu semester ke depan.
+Pada tahap awal ini, kita akan menginstall sebuah perangkat yang aka di gunakan selama satu semester. 
 
 ### Perangkat Lunak yang Digunakan:
 * **Wireshark:** Digunakan sebagai penganalisis protokol jaringan utama.
+  Jika belum terinstall dapat di download pada link berikut http://www.wireshark.org/
+  
 * **Python 3:** Digunakan untuk mendukung modul pemrograman *socket* di pertemuan mendatang.
+  Jika belum terinstall dapat di download pada link berikut https://www.python.org/downloads/
 
 
 ## 3. Modul 2: Pengenalan Tools Wireshark
