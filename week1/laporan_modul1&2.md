@@ -31,7 +31,7 @@ Seperti yang terlihat di gambar atas, gambar tersebut adalah tampilan awal dari 
 Jika kita klik salah satu (Karena saya terhubung dengan wifi makanya bisa di track dan di analisis), maka tampilannya akan menjadi seperti ini:
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/tampilan%20wifi.png">
   <br>
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
@@ -44,21 +44,67 @@ Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan 
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
 
-Frame ini ibarat sebuah informasi unik yang dikirimkan oleh komputer sebagai identitas dari suatu device, seperti IP, Protocol, Dll.
+1. Kotak merah = berisi informasi paket-paket yang berhasil ditangkap dalam satu baris untuk setiap paket seperti protokol, destination, time dll. 
+Frame ini ibarat Sebuah informasi unik yang dikirimkan oleh komputer sebagai identitas dari suatu device, seperti IP, Protocol, Dll.
+
+2. Kotak Kuning = Berisi detail teknis dari suatu paket yang ada yaitu ada frame(informasi dari satu paketnya), serta protokol yang dia gunakan (TCP/UDP).
+
+3. Kotak Biru = Berisi detail dari frame yang di petakan kedalam sebuah heksadesimal.
+
+ke 3 tampilan diatas lah yang akan kita gunakan untuk melakukan analsis secara mendalam. selanjtunya kita akan mencoba untuk menganalisis bagaimana Wireshark dapat mengenali protokol seperti HTTP
 
 ## 4. Analisis Pengenalan Protokol HTTP
-Sesuai instruksi modul, dilakukan pengujian dengan mengakses URL untuk memicu lalu lintas HTTP dan mengamati interaksi protokol secara langsung.
+Kita akan menggunakan contoh sederhana untuk HTTP, Link nya bisa anda akses dibawah ini:
+http://gaia.cs.umass.edu/wiresharklabs/INTRO-wireshark-file1.html
 
-### Langkah Identifikasi HTTP:
-1.  **Filtering:** Mengetik "http" pada kolom filter untuk mengisolasi paket dari protokol lain agar hanya pesan HTTP yang ditampilkan.
-2.  **Selection:** Memilih paket dengan metode **GET** yang dikirim dari komputer klien ke server tujuan.
-3.  **Inspection:** Memperluas bagian *Hypertext Transfer Protocol* pada jendela detail untuk melihat konten terperinci seperti pesan aplikasi yang ditemukan dalam segmen TCP.
+tugas kita sederhana, yaitu memastikan dan melihat bagaimana cara kerja wireshark dalam menerima paket paket dari jaringan. 
+
+Langkah Langkah nya
+
+- Buka Link diatas (bisa di chrome atau edge atau search engine sejenis)
+- Masuk klik pada bagian Wifi (atau ethernet local yang menampilkan grafik kalau anda menggunakan wire/kabel)
+- Nanti akan muncul tampilan seperti gambar seperti dii bawah ini:
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <br>
+  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
+</p>
+kita cukup perhatikan kotak warna merah dan fokus ke protokol, apakah ada protokol yang bernama HTTP
+jika tidak ada, maka anda bisa melakukan restart dengan cara:
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <br>
+  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
+</p>
+
+a. Tekan Tombol merah seperti yang di tandai warna biru untuk memberhentikan atau stop proses pelacakan dan penangkapan paket paket yang ada
+b. Lalu pilih opsi Capture (yang tandai oleh kotak warna merah) untuk mulai penangkapan kembali
+c. Pilih Wifi (atau ethernet local kalau memakai kabel) dan klik Save.
+d. Simpan tanpa menyimpan data sebelumnya (jika tidak ingin menambah cache). 
+
+
+Jika masih belum muncul, anda bisa restart Chrome/edge beberapa kali atau berpindah ke search engine yang lain. 
+Jika sudah ketemu (biasanya akan muncul beberapa paket), anda bisa melakukan filter dengan cara pergi ke bagian search(dibagian atas) lalu ketik "http" untuk mealkukan filter hanya pada protokol HTTP. 
+
+Jika sudah, maka tampilannya seperti ini:
+<p align="center">
+  <img src="path/ke/gambar-http-result.png" alt="Hasil Capture HTTP">
+  <br>
+  <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
+</p>
+
+Anda bisa Pilih Info 2"00 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah untuk detail dari paketnya. 
 
 <p align="center">
   <img src="path/ke/gambar-http-result.png" alt="Hasil Capture HTTP">
   <br>
   <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
 </p>
+
+Disitu akan ada "Line Based text data", klik untuk membuak informasi detailnya. 
+Jika terdapat struktur HTML seperti:
+"Congratulations! You've downloaded the first Wireshark lab file!" (seperti yang muncul pada tulisan HTML di browser anda), maka selamat, kiat telah berhasil menamatka wireshark!!. 
 
 > **Catatan Penting:** Sebuah *Packet Sniffer* itu sendiri bersifat pasif. Ia hanya menerima salinan paket yang dikirim/diterima oleh aplikasi dan tidak pernah mengirim ataupun menerima paket itu sendiri secara aktif.
 
