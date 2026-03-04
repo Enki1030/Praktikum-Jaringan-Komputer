@@ -6,7 +6,6 @@
 ## 1. Pendahuluan
 Praktikum Jaringan Komputer ini memberikan pembelajaran dan praktik dari matakuliah jaringan komputer teori. Melalui praktikum ini, kita menggunakan **Wireshark**, sebuah perangkat lunak *packet sniffer* yang memungkinkan kita untuk mengambil  ("sniff") dan menganalisis pesan yang bertukar antar protokol yang bisa di lihat di wireshark. 
 
-
 ## 2. Modul 1: Persiapan Lingkungan (Running Modul)
 Pada tahap awal ini, kita akan menginstall sebuah perangkat yang aka di gunakan selama satu semester. 
 
@@ -19,13 +18,23 @@ Pada tahap awal ini, kita akan menginstall sebuah perangkat yang aka di gunakan 
 
 
 ## 3. Modul 2: Pengenalan Tools Wireshark
-Modul ini berfokus pada cara kerja *Packet Sniffer* dan pengenalan antarmuka grafis (GUI) Wireshark.
+Modul ini berfokus pada cara kerja *Packet Sniffer* dan pengenalan antarmuka grafis (GUI) Wireshark. Di sini kita akan mulai untuk mencoba mengulik software ini, mulai dari tool yang ada, cara kerjanya dan bagaimana wireshark ini berguna untuk tugas analisis jaringan. 
 <p align="center">
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
   <br>
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
 
+Seperti yang terlihat di gambar atas, gambar tersebut adalah tampilan awal dari wireshark, jika kita lihat di bagian yang berwarna merah, dapat terlihat beberapa jenis jaringan mulai dari WIFI (wireless) dan Wire (Local Area Connection) dan beberapa network lainnya seperti virtual network(Host virtual Network). 
+
+
+Jika kita klik salah satu (Karena saya terhubung dengan wifi makanya bisa di track dan di analisis), maka tampilannya akan menjadi seperti ini:
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <br>
+  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
+</p>
 
 Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan setiap *frame* lapisan link (*link layer*) yang dikirim atau diterima oleh komputer, baik melalui Ethernet maupun WiFi.
 
