@@ -19,10 +19,22 @@ Pada tahap awal ini, kita akan menginstall sebuah perangkat yang aka di gunakan 
 
 ## 3. Modul 2: Pengenalan Tools Wireshark
 Modul ini berfokus pada cara kerja *Packet Sniffer* dan pengenalan antarmuka grafis (GUI) Wireshark. Di sini kita akan mulai untuk mencoba mengulik software ini, mulai dari tool yang ada, cara kerjanya dan bagaimana wireshark ini berguna untuk tugas analisis jaringan. 
+
+Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan setiap *frame* lapisan link (*link layer*) yang dikirim atau diterima oleh komputer, baik melalui Ethernet maupun WiFi.
+
 <p align="center">
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
   <br>
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
+</p>
+
+Setelah mengetahui cara kerja nya(secara sederhana), kita masuk kedalam praktikum untuk mencoba Wireshark
+
+---
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
+  <br>
 </p>
 
 Seperti yang terlihat di gambar atas, gambar tersebut adalah tampilan awal dari wireshark, jika kita lihat di bagian yang berwarna merah, dapat terlihat beberapa jenis jaringan mulai dari WIFI (wireless) dan Wire (Local Area Connection) dan beberapa network lainnya seperti virtual network(Host virtual Network). 
@@ -33,16 +45,9 @@ Jika kita klik salah satu (Karena saya terhubung dengan wifi makanya bisa di tra
 <p align="center">
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/tampilan%20wifi.png">
   <br>
-  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
 
-Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan setiap *frame* lapisan link (*link layer*) yang dikirim atau diterima oleh komputer, baik melalui Ethernet maupun WiFi.
 
-<p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
-  <br>
-  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
-</p>
 
 1. Kotak merah = berisi informasi paket-paket yang berhasil ditangkap dalam satu baris untuk setiap paket seperti protokol, destination, time dll. 
 Frame ini ibarat Sebuah informasi unik yang dikirimkan oleh komputer sebagai identitas dari suatu device, seperti IP, Protocol, Dll.
@@ -67,7 +72,6 @@ Langkah Langkah nya
 <p align="center">
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
   <br>
-  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
 kita cukup perhatikan kotak warna merah dan fokus ke protokol, apakah ada protokol yang bernama HTTP
 jika tidak ada, maka anda bisa melakukan restart dengan cara:
@@ -75,7 +79,6 @@ jika tidak ada, maka anda bisa melakukan restart dengan cara:
 <p align="center">
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/carakerjasniffset.png" alt="Arsitektur Packet Sniffer">
   <br>
-  <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
 
 a. Tekan Tombol merah seperti yang di tandai warna biru untuk memberhentikan atau stop proses pelacakan dan penangkapan paket paket yang ada
@@ -89,15 +92,15 @@ Jika sudah ketemu (biasanya akan muncul beberapa paket), anda bisa melakukan fil
 
 Jika sudah, maka tampilannya seperti ini:
 <p align="center">
-  <img src="path/ke/gambar-http-result.png" alt="Hasil Capture HTTP">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Hasil%20filter%20http.png" alt="Hasil Capture HTTP">
   <br>
-  <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
+  
 </p>
 
 Anda bisa Pilih Info 2"00 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah untuk detail dari paketnya. 
 
 <p align="center">
-  <img src="path/ke/gambar-http-result.png" alt="Hasil Capture HTTP">
+  <img src="[path/ke/gambar-http-result.png" alt="Hasil Capture HTTP](https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Bukti%20BERHASIL.png)">
   <br>
   <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
 </p>
