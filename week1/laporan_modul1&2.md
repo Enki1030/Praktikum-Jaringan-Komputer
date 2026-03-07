@@ -73,7 +73,7 @@ Langkah Langkah nya
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/tampilan%20wifi.png" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
-kita cukup perhatikan kotak warna merah dan fokus ke protokol, apakah ada protokol yang bernama HTTP
+kita cukup fokus pada bagian Prtokol, apakah ada protokol yang bernama HTTP atau tidak. 
 jika tidak ada, maka anda bisa melakukan restart dengan cara:
 
 <p align="center">
@@ -81,14 +81,14 @@ jika tidak ada, maka anda bisa melakukan restart dengan cara:
   <br>
 </p>
 
-a. Tekan Tombol merah seperti yang di tandai warna biru untuk memberhentikan atau stop proses pelacakan dan penangkapan paket paket yang ada
-b. Lalu pilih opsi Capture (yang tandai oleh kotak warna merah) untuk mulai penangkapan kembali
-c. Pilih Wifi (atau ethernet local kalau memakai kabel) dan klik Save.
-d. Simpan tanpa menyimpan data sebelumnya (jika tidak ingin menambah cache). 
+- Tekan Tombol merah (yang di tandai kotak merah diatas), fungsinya untuk memberhentikan atau stop proses pelacakan dan penangkapan paket paket yang ada
+- Lalu pilih opsi Capture (yang tandai oleh kotak warna kunimng) untuk mulai penangkapan kembali
+- Pilih Wifi (atau ethernet local kalau memakai kabel) dan klik Save.
+- Simpan tanpa menyimpan data sebelumnya (jika tidak ingin menambah cache). 
 
 
-Jika masih belum muncul, anda bisa restart Chrome/edge beberapa kali atau berpindah ke search engine yang lain. 
-Jika sudah ketemu (biasanya akan muncul beberapa paket), anda bisa melakukan filter dengan cara pergi ke bagian search(dibagian atas) lalu ketik "http" untuk mealkukan filter hanya pada protokol HTTP. 
+Jika masih belum muncul, anda bisa restart Chrome/edge beberapa kali atau berpindah ke browser yang lain. 
+Jika sudah ketemu (biasanya akan muncul beberapa paket dengan protokol HTTP), anda bisa melakukan filter dengan cara pergi ke bagian search (dibagian atas) lalu ketik "http" untuk mealkukan filter hanya pada protokol HTTP. 
 
 Jika sudah, maka tampilannya seperti ini:
 <p align="center">
@@ -97,7 +97,7 @@ Jika sudah, maka tampilannya seperti ini:
   
 </p>
 
-Anda bisa Pilih Info 2"00 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah untuk detail dari paketnya. 
+Anda bisa Pilih Info "200 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah untuk detail dari paketnya. 
 
 <p align="center">
   <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Bukti%20BERHASIL.png">
@@ -105,9 +105,9 @@ Anda bisa Pilih Info 2"00 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah
   <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
 </p>
 
-Disitu akan ada "Line Based text data", klik untuk membuak informasi detailnya. 
+Disitu akan ada "Line Based text data", klik untuk membuka informasi detailnya. 
 Jika terdapat struktur HTML seperti:
-"Congratulations! You've downloaded the first Wireshark lab file!" (seperti yang muncul pada tulisan HTML di browser anda), maka selamat, kiat telah berhasil menamatka wireshark!!. 
+"Congratulations! You've downloaded the first Wireshark lab file!" (seperti yang muncul pada tulisan HTML di browser anda), maka selamat, kita telah berhasil menamatkan wireshark!!. 
 
 > **Catatan Penting:** Sebuah *Packet Sniffer* itu sendiri bersifat pasif. Ia hanya menerima salinan paket yang dikirim/diterima oleh aplikasi dan tidak pernah mengirim ataupun menerima paket itu sendiri secara aktif.
 
