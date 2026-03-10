@@ -39,8 +39,8 @@ maka tandanya wireshark berhasil mendapatkan html kita.
 ### Pertanyaan: Bagaimana kalau 200 OK nya tidak muncul?
 Nah ini merupakan masalah umum yang ditemukan, biasanya masalah nya itu disebabkan oleh beberapa hal seperti :
 <br>
-- Linknya menggunakan HTTPS, bukan HTTP, biasanya HTTP akan muncul tanda "not secure" dari web browsernya, jika tidak muncul, mungkin anda bisa ganti link HTTPS nya menjadi HTTP.
-- Masih ada cache. browser itu mempunyai sebuah cache demi kelancaran dan kecepatan buka website. jika kita baru pertama kali buka link tersebut, maka laptop kita akan request ke server link tersebut untuk meminta HTML nya dan kemudian si-server akan merespon dengan memberikan HTML nya ke web browser kita. nah Informasi tersebut biasanya di simpan di cache(memori sementara) agar ketiak di akses lagi, kita tidak perlu lagi request yang akan membutuhkan waktu lama. Maka dari itu, anda tidak bisa hanay refresh web browser saj (refresh itu hanya memulihkan halaman web nya, tetapi cachenya masih ada), kita perlu meleaukan refresh + hapus cache dengan cara
+- *Linknya menggunakan HTTPS, bukan HTTP.* biasanya HTTP akan muncul tanda "not secure" dari web browsernya, jika tidak muncul, mungkin anda bisa ganti link HTTPS nya menjadi HTTP.
+- *Masih ada cache.* browser itu mempunyai sebuah cache demi kelancaran dan kecepatan buka website. jika kita baru pertama kali buka link tersebut, maka laptop kita akan request ke server link tersebut untuk meminta HTML nya dan kemudian si-server akan merespon dengan memberikan HTML nya ke web browser kita. nah Informasi tersebut biasanya di simpan di cache(memori sementara) agar ketiak di akses lagi, kita tidak perlu lagi request yang akan membutuhkan waktu lama. Maka dari itu, anda tidak bisa hanay refresh web browser saj (refresh itu hanya memulihkan halaman web nya, tetapi cachenya masih ada), kita perlu meleaukan refresh + hapus cache dengan cara
   1. inspect -> network -> matikan disable cache nya. lalu kita refresh dengan klik *ctrl + Shift + R*
 - Cache yang ada di wiresharknya, kita bisa refresh wiresharknya dengan cara:
   <p align="center">
@@ -55,4 +55,4 @@ Nah ini merupakan masalah umum yang ditemukan, biasanya masalah nya itu disebabk
 
   
 
-## B. 
+## B. Retrieving long document
