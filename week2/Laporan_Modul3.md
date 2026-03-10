@@ -26,9 +26,9 @@ Langkah Langkah yang diperlukan cukup sederhana, yaitu:
 <br>
 1. Buka wireshark -> Wifi(jika pakai wifi), maka tampilan awalnya akan seperti ini:(Masukkan Gambar)
 <br>
-3. Buka link : http://gaia.cs.umass.edu/wireshark-labs/HTTPwireshark-file1.html di browser anda.
+2. Buka link : http://gaia.cs.umass.edu/wireshark-labs/HTTPwireshark-file1.html di browser anda.
 <br>
-5. Tunggu hasilnya di Wireshark, jika sudah muncul protokol HTTP, kita bisa langsung filter dengan cara ketik http di search/pencarian
+3. Tunggu hasilnya di Wireshark, jika sudah muncul protokol HTTP, kita bisa langsung filter dengan cara ketik http di search/pencarian
 <br>
 
 (MASUKKAN GAMBAR FILTER HTTP DISINI DAN BERIKAN KE USER HASILNYA)
@@ -45,6 +45,16 @@ Nah ini merupakan masalah umum yang ditemukan, biasanya masalah nya itu disebabk
 - Masih ada cache. browser itu mempunyai sebuah cache demi kelancaran dan kecepatan buka website. jika kita baru pertama kali buka link tersebut, maka laptop kita akan request ke server link tersebut untuk meminta HTML nya dan kemudian si-server akan merespon dengan memberikan HTML nya ke web browser kita. nah Informasi tersebut biasanya di simpan di cache(memori sementara) agar ketiak di akses lagi, kita tidak perlu lagi request yang akan membutuhkan waktu lama. Maka dari itu, anda tidak bisa hanay refresh web browser saj (refresh itu hanya memulihkan halaman web nya, tetapi cachenya masih ada), kita perlu meleaukan refresh + hapus cache dengan cara
   1. inspect -> network -> matikan disable cache nya. lalu kita refresh dengan klik *ctrl + Shift + R*
 - Cache yang ada di wiresharknya, kita bisa refresh wiresharknya dengan cara:
+  <p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Arsitektur Packet Sniffer">
+  <br>
+</p>
+
+- Tekan Tombol merah (yang di tandai kotak merah diatas), fungsinya untuk memberhentikan atau stop proses pelacakan dan penangkapan paket paket yang ada
+- Lalu pilih opsi Capture (yang tandai oleh kotak warna kunimng) untuk mulai penangkapan kembali
+- Pilih Wifi (atau ethernet local kalau memakai kabel) dan klik Save.
+- Simpan tanpa menyimpan data sebelumnya (jika tidak ingin menambah cache). 
+
   
 
 ## B. 
