@@ -25,9 +25,7 @@ Disini kita melihat basic dari get (request ke server untuk meminta data (HTML A
 Langkah Langkah yang diperlukan cukup sederhana, yaitu:
 <br>
 1. Buka wireshark -> Wifi(jika pakai wifi), maka tampilan awalnya akan seperti ini:(Masukkan Gambar)
-<br>
 2. Buka link : http://gaia.cs.umass.edu/wireshark-labs/HTTPwireshark-file1.html di browser anda.
-<br>
 3. Tunggu hasilnya di Wireshark, jika sudah muncul protokol HTTP, kita bisa langsung filter dengan cara ketik http di search/pencarian
 <br>
 
