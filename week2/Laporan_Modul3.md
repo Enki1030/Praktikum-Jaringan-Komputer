@@ -56,3 +56,75 @@ Nah ini merupakan masalah umum yang ditemukan, biasanya masalah nya itu disebabk
   
 
 ## B. Retrieving long document
+Sebelumnya kita hanya menggunakan HTMl sederhana yang hanya mengandung 1 -2 kalimat teks saja, untuk kali ini, kita akan mencoba menggunakan HTML dengan teks yang sedikit panjang. 
+Langkahnya sama seperti sebelumnya, anda buka wireshark -> wifi dan setelah anda bisa buka link : http://gaia.cs.umass.edu/wireshark-labs/HTTPwireshark-file3.html di browser anda. 
+<br>
+Setelah itu anda bisa langsung filter dengan mengetikkan "http" lalu cari paket yang terdapat info "200 OK (text/html)".
+ <p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+Setelah mendapatkannya, maka klik dan anda akan melihat informasi detail dari paketnya seperti gambar diatas. dalam pengiriman suatu data, untuk HTML yang memiliki elemen yang banyak, HTTP akan mengirimkannya kedalam beberapa fragment hasil pecahan HTML utuh tersebut. untuk HTML dari link diatas, data HTML nya dipecah menjadi 4 Fragmen (yang di gambar disebtu frame). 
+### Pertanyaan: Kenapa harus di pecah? alasan simpelnya adalah karena TCP (protokol untuk transport data) itu terbatas, untuk HTML dengan ukuran yang besar, kita tidak bisa mengirimkannay sekaligus, maka dari itu, HTTP akan memecahnya menjadi beberapa fragemen kecil dan kemudian akan dikirim secara sekuensial (karena pakai protokol TCP, jadi data dikiirim dalam urutan untuk menjaga agar data sampai ketujuan dengan selamat). 
+
+Kita juga bisa lihat pemecahannya ketika wireshark menangkap suatu paket:
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+Tanda panah ke kanan (simbol yang berada di palin kiri) menandakan request yang kita lakukan ke server untuk meminta data
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+Sedangkan tanda panah ke kiri menandakan hasil response dari server. 
+<br>
+ditengah antara request dan response tersebut terdapat beberaap TCP yang masuk, beberapa TCP itu adalah data yang dikirim dari server ke web browser kita, dalam paket itu, ada beberapa TCP yang dilacak, itu artinya paket HTML yang besar tersebut dipecah menjadi beberapa paket TCP yang lebih kecil (frame/fragmen) agar bisa di kirim. 
+
+## C. HTML Documents dengan Embedded Objects
+Kali ini kita mencoba bagaimana wireshark melacak objek yang di unduh ketika file html atau suatu website mempunyai objek didalamnya (bisa berupa foto, video, icon/gambar, dll). 
+<br>
+Langkahnya sama, kita tinggal masukkan link browser berikut untuk melakukan pengujiannya :http://gaia.cs.umass.edu/wireshark-labs/HTTPwireshark-file4.html
+Jika sudah, anda bisa klik. Pastikan HTML nya punya gambar seperti tampilan HTML dibawah ini:
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+
+Jika kita lihat pada bagian inspect dengan cara klik kanan -> inspect. kita akan melihat bahwa gambarnya tersebut merupakan gambar dalam bentuk link menggunakan kode html
+''' <img src =""> ''' dan bukan di simpan dalam file lokal, karena diakses di http juga, maka seharusya jika kita melakukan pelacakan di wireshark (filter HTTP), kiat akan menemukan link http dari ke 2 gambar tersebut
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+
+Bisa dilihat pada gambar terdapat HTTP untuk PNG (icon logo) dan juga jpeg (sampul buku) yang menandakan bahwa wireshark juga dapat melacak suatu http didalam http lain karena keduanya berada di jaringan yang sama. 
+
+## D. HTTP Authentication
+Terakhir mari kita coba untuk mengunjungi website yang memiliki pelindung didalamnya (berupa sandi) dan melihat urutan pesan http yang di tangkap oleh wireshark. 
+URL-nya: http://gaia.cs.umass.edu/wiresharklabs/protected_pages/HTTP-wireshark-file5.html
+<br> 
+website tersebut dilindungi oleh kata sandi, maka jika anda ingin mengaksesnya, anda bisa masukkan username dan passwordnya
+username: wireshark-students
+password: network
+
+Jika sudah klik URL nya, maka tampilannya akan seperti ini:
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+kita masukkan username dan passwordnya, setelah dimasukkan tampilan HTML-nya akan menjadi seperti ini:
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+
+Sekarang mari kita lihat di bagian wiresharknya, anda bisa menunggu terlebih dahulu lalu filter untuk HTTP
+
+
+
+
+
