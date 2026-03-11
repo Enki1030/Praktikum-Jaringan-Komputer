@@ -65,7 +65,10 @@ Setelah itu anda bisa langsung filter dengan mengetikkan "http" lalu cari paket 
    <br>
 </p>
 Setelah mendapatkannya, maka klik dan anda akan melihat informasi detail dari paketnya seperti gambar diatas. dalam pengiriman suatu data, untuk HTML yang memiliki elemen yang banyak, HTTP akan mengirimkannya kedalam beberapa fragment hasil pecahan HTML utuh tersebut. untuk HTML dari link diatas, data HTML nya dipecah menjadi 4 Fragmen (yang di gambar disebtu frame). 
-### Pertanyaan: Kenapa harus di pecah? alasan simpelnya adalah karena TCP (protokol untuk transport data) itu terbatas, untuk HTML dengan ukuran yang besar, kita tidak bisa mengirimkannay sekaligus, maka dari itu, HTTP akan memecahnya menjadi beberapa fragemen kecil dan kemudian akan dikirim secara sekuensial (karena pakai protokol TCP, jadi data dikiirim dalam urutan untuk menjaga agar data sampai ketujuan dengan selamat). 
+<br>
+
+### Pertanyaan: Kenapa harus di pecah? 
+alasan simpelnya adalah karena TCP (protokol untuk transport data) itu terbatas, untuk HTML dengan ukuran yang besar, kita tidak bisa mengirimkannay sekaligus, maka dari itu, HTTP akan memecahnya menjadi beberapa fragemen kecil dan kemudian akan dikirim secara sekuensial (karena pakai protokol TCP, jadi data dikiirim dalam urutan untuk menjaga agar data sampai ketujuan dengan selamat). 
 
 Kita juga bisa lihat pemecahannya ketika wireshark menangkap suatu paket:
 <p align="center">
@@ -122,9 +125,36 @@ kita masukkan username dan passwordnya, setelah dimasukkan tampilan HTML-nya aka
    <br>
 </p>
 
-Sekarang mari kita lihat di bagian wiresharknya, anda bisa menunggu terlebih dahulu lalu filter untuk HTTP
+Sekarang mari kita lihat di bagian wiresharknya, anda bisa menunggu terlebih dahulu lalu filter untuk HTTP. Jika sudah, anda akan melihat gambar seperti dibawah ini
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
 
+Pada gambar yang saya tandai, info 401 Unaothorized merupakan web sebelum kiat memasuki sandi, setelah kiat masuki sandi dan username nya, makapake berikutnya (dibawah Unauthorized) akan muncul sebagai butki bahwa kita sudah mendapatkan izin mengunjungi web http tersebut.
 
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
 
+Tetapi karena website ini menggunakan HTTP alih alih HTTPS(tidak ada secure), artinay snadi yang kiat masuki tadi dapat dengan mudah dlihat oleh orang lain. Sandi ini biasanya disimpan dalam bentuk encoder basic authentication. 
+<br>
+Cara mendapatkan encoder Auth nya adalah, anda tinggal klik paket yang berada di bawah Unauthorized tersebut, masuk ke bagian "Hyper Transfer Protocol", disitu akan ada Authorization dengan encodenya 
+'''Basic d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms'''
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+
+Jika kita mencoba untuk melakukan decoder (mengubah kode Diatas menjadi plain text), kita akan mendapatkan kembali username:password kita
+
+<p align="center">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+   <br>
+</p>
+
+## KESIMPULAN
 
 
