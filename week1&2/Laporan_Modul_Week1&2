@@ -23,7 +23,7 @@ Modul ini berfokus pada cara kerja *Packet Sniffer* dan pengenalan antarmuka gra
 Wireshark bekerja dengan bantuan *Packet Capture Library* yang menerima salinan setiap *frame* lapisan link (*link layer*) yang dikirim atau diterima oleh komputer, baik melalui Ethernet maupun WiFi.
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/carakerjasniffset.png">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/carakerjasniffset.png">
   <br>
   <em>Gambar 3.1: Struktur dasar sebuah Packet Sniffer</em>
 </p>
@@ -33,7 +33,7 @@ Setelah mengetahui cara kerja nya(secara sederhana), kita masuk kedalam praktiku
 ---
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Wireshark%20tampilan.png">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/Wireshark%20tampilan.png">
   <br>
 </p>
 
@@ -43,7 +43,7 @@ Seperti yang terlihat di gambar atas, gambar tersebut adalah tampilan awal dari 
 Jika kita klik salah satu (Karena saya terhubung dengan wifi makanya bisa di track dan di analisis), maka tampilannya akan menjadi seperti ini:
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/tampilan%20wifi.png">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/tampilan%20wifi.png">
   <br>
 </p>
 
@@ -70,14 +70,14 @@ Langkah Langkah nya
 - Masuk klik pada bagian Wifi (atau ethernet local yang menampilkan grafik kalau anda menggunakan wire/kabel)
 - Nanti akan muncul tampilan seperti gambar seperti dii bawah ini:
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/tampilan%20wifi.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/tampilan%20wifi.png" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
 kita cukup fokus pada bagian Prtokol, apakah ada protokol yang bernama HTTP atau tidak. 
 jika tidak ada, maka anda bisa melakukan restart dengan cara:
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/CAPTURE.png" alt="Arsitektur Packet Sniffer">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/CAPTURE.png" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
 
@@ -92,7 +92,7 @@ Jika sudah ketemu (biasanya akan muncul beberapa paket dengan protokol HTTP), an
 
 Jika sudah, maka tampilannya seperti ini:
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Hasil%20filter%20http.png" alt="Hasil Capture HTTP">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/Hasil%20filter%20http.png" alt="Hasil Capture HTTP">
   <br>
   
 </p>
@@ -100,7 +100,7 @@ Jika sudah, maka tampilannya seperti ini:
 Anda bisa Pilih Info "200 OK (Text/HTML)" dan kemudian masuk kebagian Kiri bawah untuk detail dari paketnya. 
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1/asset/Bukti%20BERHASIL.png">
+  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week1&2/asset/Bukti%20BERHASIL.png">
   <br>
   <em>Gambar 4.1: Detail pesan HTTP GET yang berhasil ditangkap</em>
 </p>
