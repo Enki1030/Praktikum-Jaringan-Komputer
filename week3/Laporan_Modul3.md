@@ -30,7 +30,7 @@ Langkah Langkah yang diperlukan cukup sederhana, yaitu:
 <br>
 
  <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/FIlter%20HTTP(Gambar1).jpeg" alt="Arsitektur Packet Sniffer">
+  <img src="./aset/FIlter%20HTTP(Gambar1).jpeg" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
 
@@ -47,7 +47,7 @@ Nah ini merupakan masalah umum yang ditemukan, biasanya masalah nya itu disebabk
   1. inspect -> network -> matikan disable cache nya. lalu kita refresh dengan klik *ctrl + Shift + R*
 - Cache yang ada di wiresharknya, kita bisa refresh wiresharknya dengan cara:
   <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/asset/CAPTURE.png" alt="Arsitektur Packet Sniffer">
+  <img src="../week1&2/asset/CAPTURE.png" alt="Arsitektur Packet Sniffer">
   <br>
 </p>
 
@@ -64,7 +64,7 @@ Langkahnya sama seperti sebelumnya, anda buka wireshark -> wifi dan setelah anda
 <br>
 Setelah itu anda bisa langsung filter dengan mengetikkan "http" lalu cari paket yang terdapat info "200 OK (text/html)".
  <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/Gambar%202.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/Gambar%202.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 Setelah mendapatkannya, maka klik dan anda akan melihat informasi detail dari paketnya seperti gambar diatas. dalam pengiriman suatu data, untuk HTML yang memiliki elemen yang banyak, HTTP akan mengirimkannya kedalam beberapa fragment hasil pecahan HTML utuh tersebut. untuk HTML dari link diatas, data HTML nya dipecah menjadi 4 Fragmen (yang di gambar disebtu frame). 
@@ -75,13 +75,13 @@ alasan simpelnya adalah karena TCP (protokol untuk transport data) itu terbatas,
 
 Kita juga bisa lihat pemecahannya ketika wireshark menangkap suatu paket:
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/Gambar%203(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/Gambar%203(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 Tanda panah ke kanan (simbol yang berada di palin kiri) menandakan request yang kita lakukan ke server untuk meminta data
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week2/aset/gambar%204(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%204(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 Sedangkan tanda panah ke kiri menandakan hasil response dari server. 
@@ -95,7 +95,7 @@ Langkahnya sama, kita tinggal masukkan link browser berikut untuk melakukan peng
 Jika sudah, anda bisa klik. Pastikan HTML nya punya gambar seperti tampilan HTML dibawah ini:
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%205.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%205.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 
@@ -103,7 +103,7 @@ Jika kita lihat pada bagian inspect dengan cara klik kanan -> inspect. kita akan
 ''' img src ="" ''' dan bukan di simpan dalam file lokal, karena diakses di http juga, maka seharusya jika kita melakukan pelacakan di wireshark (filter HTTP), kiat akan menemukan link http dari ke 2 gambar tersebut
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%206(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%206(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 
@@ -119,25 +119,25 @@ password: network
 
 Jika sudah klik URL nya, maka tampilannya akan seperti ini:
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%207.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%207.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 kita masukkan username dan passwordnya, setelah dimasukkan tampilan HTML-nya akan menjadi seperti ini:
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%208.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%208.jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 
 Sekarang mari kita lihat di bagian wiresharknya, anda bisa menunggu terlebih dahulu lalu filter untuk HTTP. Jika sudah, anda akan melihat gambar seperti dibawah ini
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%209(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%209(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 
 Pada gambar yang saya tandai, info 401 Unaothorized merupakan web sebelum kita memasuki sandi, setelah kita masuki sandi dan username nya, maka paket berikutnya (dibawah Unauthorized) akan muncul sebagai bukti bahwa kita sudah mendapatkan izin mengunjungi web http tersebut.
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%209(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%209(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 
@@ -147,14 +147,14 @@ Cara mendapatkan encoder Auth nya adalah, anda tinggal klik paket yang berada di
 '''Basic d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms'''
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%2010(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%2010(1).jpeg" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 
 Jika kita mencoba untuk melakukan decoder (mengubah kode Diatas menjadi plain text), kita akan mendapatkan kembali username:password kita
 
 <p align="center">
-  <img src="https://github.com/Enki1030/Praktikum-Jaringan-Komputer/blob/main/week3/aset/gambar%2011.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
+  <img src="./aset/gambar%2011.png" alt="Bukti bahwa file besar akan di kirim dlama fragment yang berbeda">
    <br>
 </p>
 

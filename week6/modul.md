@@ -12,14 +12,14 @@ Sebelum masuk ke dalam praktikumnya, kita perlu melakukan beberapa persiapan
 
 2. Buka http://gaia.cs.umass.edu/wireshark-labs/TCP-wireshark-file1.html
 
-![Cara Kerja AI](./Assets/1.png)
+![Cara Kerja AI](./assets/1.png)
 
 3. Buka wiresharknya dan mulai capture
 4. Upload File alice.txt di bagian choose file(web diatas).
 
 5. ketik tcp di kolom filter wiresharknya, lalu hasilnya akan seperti dibawah ini:
 
-![Cara Kerja AI](./Assets/3.png)
+![Cara Kerja AI](./assets/3.png)
 
 # Pertanyaan 
 
@@ -39,7 +39,7 @@ Sebelum masuk ke dalam praktikumnya, kita perlu melakukan beberapa persiapan
 
 dari hasil percobaan, kita dapat hasilnya seperti ini:
 
-![Cara Kerja AI](./Assets/2.png)
+![Cara Kerja AI](./assets/2.png)
 
 untuk nomor urut segmen TCP SYN adalah 0. Dimana pada gambar diatas ditandai dengan nomor urut 1. 
 
@@ -51,7 +51,7 @@ Lalu Sebuah segmen diidentifikasi sebagai SYN karena nilai pada bagian Flags di 
 ### 2. Berapa nomor urut segmen SYNACK yang dikirim oleh gaia.cs.umass.edu ke komputer klien sebagai balasan dari SYN? Berapa nilai dari field Acknowledgement pada segmen SYNACK? Bagaimana gaia.cs.umass.edu menentukan nilai tersebut? Apa yang dimiliki oleh segmen sehingga teridentifikasi sebagai segmen SYNACK?
 
 
-![Cara Kerja AI](./Assets/4..png)
+![Cara Kerja AI](./assets/4..png)
 
 nomor urut (Seq) yang dikirim oleh server gaia.cs.umass.edu adalah 0 (Kotak warna merah pertama).
 
@@ -74,7 +74,7 @@ Ini adalah langkah kedua dari proses three-way handshake, di mana server menyetu
 ### 3. Berapa nomor urut segmen TCP yang berisi perintah HTTP POST? Perhatikan bahwa untuk menemukan perintah POST, Anda harus menelusuri content field milik paket di bagian bawah jendela Wireshark, kemudian cari segmen yang berisi "POST" di bagian field DATA nya.
 
 
-![Cara Kerja AI](./Assets/5.png)
+![Cara Kerja AI](./assets/5.png)
 
 dari gambar diatas, nomor urut segmen TCP yang berisi perintah HTTP POST tersebut adalah 1.
 
@@ -84,7 +84,7 @@ Segmen SYN sebelumnya menggunakan nomor 0, dan setelah koneksi mapan, pengiriman
 
 ### 4. Anggap segmen TCP yang berisi HTTP POST sebagai segmen pertama dalam koneksi TCP. Berapa nomor urut dari enam segmen pertama dalam TCP (termasuk segmen yang berisi HTTP POST)? Pada jam berapa setiap segmen dikirim? Kapan ACK untuk setiap segmen diterima? Dengan adanya perbedaan antara kapan setiap segmen TCP dikirim dan kapan acknowledgement-nya diterima, berapakah nilai RTT untuk keenam segmen tersebut? Berapa nilai EstimatedRTT setelah penerimaan setiap ACK?
 
-![Cara Kerja AI](./Assets/6.png)
+![Cara Kerja AI](./assets/6.png)
 
 dari hasil gambar di atas, 6 segmen pertamanya adalah:
 1. SEQ = 1; Time = 5.6222s, RTT = 900ms
@@ -120,7 +120,7 @@ Segmen 6: (0.875x640.4)+(0.125x262) = 588.8 ms
 
 ### 5. Berapa panjang setiap enam segmen TCP pertama?
 
-![Cara Kerja AI](./Assets/7.png)
+![Cara Kerja AI](./assets/7.png)
 
 panjang TCp segmen dari 6 segmen pertama adalah:
 
@@ -133,19 +133,19 @@ panjang TCp segmen dari 6 segmen pertama adalah:
 
 ### 6. Berapa jumlah minimum ruang buffer tersedia yang disarankan kepada penerima dan diterima untuk seluruh trace? Apakah kurangnya ruang buffer penerima pernah menghambat pengiriman?
 
-![Cara Kerja AI](./Assets/8.png)
+![Cara Kerja AI](./assets/8.png)
 
 Nilai window size menunjukkan kapasitas buffer penerima yaitu 796 bytes. Dalam trace ini, tidak terlihat adanya indikasi bahwa kurangnya ruang buffer penerima menghambat pengiriman, karena tidak ada segmen yang ditransmisikan ulang atau adanya penurunan throughput yang signifikan.
 
 ### 7. Apakah ada segmen yang ditransmisikan ulang dalam file trace? Apa yang anda periksa (di dalam file trace) untuk menjawab pertanyaan ini?
 
-![Cara Kerja AI](./Assets/10.png)
+![Cara Kerja AI](./assets/10.png)
 
 Ada segmen yang retranmission seperti gambar diatas itu.
 
 ### 8. Berapa banyak data yang biasanya diakui oleh penerima dalam ACK? Dapatkah anda mengidentifikasi kasus-kasus di mana penerima melakukan ACK untuk setiap segmen yang diterima?
 
-![Cara Kerja AI](./Assets/11.png)
+![Cara Kerja AI](./assets/11.png)
 
 terdapat transmisi ulang yang ditandai dengan label [TCP Retransmission] berwarna hitam. Hal ini diperiksa melalui kolom Info dan TCP Analysis Flags karena adanya paket dengan nomor urut yang sama dikirim berulang kali (akibat gangguan jaringan).
 
@@ -153,7 +153,7 @@ Penerima biasanya mengakui data dalam jumlah 1400 byte (sesuai ukuran segmen). K
 
 ### 9. Berapa throughput (byte yang ditransfer per satuan waktu) untuk sambungan TCP? Jelaskan bagaimana Anda menghitung nilai ini.
 
-![Cara Kerja AI](./Assets/12.png)
+![Cara Kerja AI](./assets/12.png)
 
 Untuk menghitung throughput, kita dapat menggunakan rumus: Throughput = Total Data Transferred / Total Time
 
@@ -165,7 +165,7 @@ Throughput = 3.852.979 bytes / 8.2768 detik ≈ 465.526 bytes/detik ≈ 458.09 K
 ### 10. Gunakan alat plotting Time-Sequence-Graph (Stevens) untuk melihat grafik nomor urut berbanding waktu dari segmen yang dikirim oleh klien ke server gaia.cs.umass.edu. Dapatkah Anda mengidentifikasi di mana fase “slow start” TCP dimulai dan berakhir, dan pada bagian mana algoritma ”congestion avoidance” mengambil alih? Berikan komentar tentang bagaimana data yang diukur berbeda dari perilaku ideal TCP yang telah kita pelajari.
 
 
-![Cara Kerja AI](./Assets/13.png)
+![Cara Kerja AI](./assets/13.png)
 
 - TCP Slow Start:
 Fase ini terjadi di bagian awal grafik, yaitu pada kisaran 0 hingga 0,5 detik. Kamu bisa mengidentifikasinya dari bentuk kurva yang menanjak secara eksponensial (melengkung ke atas). Di sini, jumlah data yang dikirim (nomor urut) meningkat dua kali lipat setiap RTT karena TCP sedang mencoba mencari kapasitas bandwidth yang tersedia.
