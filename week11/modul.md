@@ -46,7 +46,7 @@ Pengamatan mekanisme DHCP dilakukan dengan merekayasa pelepasan dan permintaan a
 ## 3. Analisis Paket DHCP
 Berdasarkan hasil tangkapan paket (trace) di Wireshark, dilakukan analisis mendalam terhadap aktivitas lalu lintas DHCP yang terekam di wireshark sebelumnya
 
-A. Proses DORA Utama
+Proses DORA Utama
 Dari tangkapan layar Wireshark, siklus inisialisasi DHCP berjalan secara berurutan:
 
 - **Discover**: Klien mengirimkan pesan broadcast dengan Source IP 0.0.0.0 menuju Destination IP 255.255.255.255 karena perangkat benar-benar belum memiliki identitasnya.
@@ -58,7 +58,7 @@ Dari tangkapan layar Wireshark, siklus inisialisasi DHCP berjalan secara berurut
 - **ACK**: Server mengirimkan paket konfirmasi akhir, menandakan bahwa siklus DORA selesai dan alamat IP resmi dikonfigurasi pada perangkat klien.
 
 
-Seluruh paket permintaan dan balasan DHCP ini dipastikan tidak tertukar di lalu lintas jaringan berkat token heksadesimal unik yang tercatat pada Transaction ID di dalam header DHCP(seperti 0x292d7ee4), serta terdapat informasiIP sewaan pada Client IP Address.
+Seluruh paket permintaan dan balasan DHCP ini tidak tertukar di lalu lintas jaringan karena adanya token heksadesimal unik yang tercatat pada Transaction ID di dalam header DHCP(seperti 0x292d7ee4), serta terdapat informasiIP sewaan pada Client IP Address.
 
 Setelah klien berhasil memegang identitas logis, hubungan komunikasi berlanjut secara langsung (unicast). Pada baris trace 36-37, terekam proses DHCP Renewal di mana klien mengirimkan paket Request secara mandiri untuk memperpanjang waktu pinjam (lease time), yang langsung disetujui server via paket ACK.
 
